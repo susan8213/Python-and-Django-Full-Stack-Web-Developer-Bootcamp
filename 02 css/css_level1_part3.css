@@ -1,0 +1,42 @@
+/*selected tag{
+  property: value;
+}*/
+
+/* CSS selector */
+.firstDiv{
+    color:blue
+}
+
+.secondDiv{
+    color:red
+}
+
+#singledout{
+    color: green;
+    text-decoration: line-through;
+}
+
+/* for all the elements, except id*/
+/*
+*{
+    color:black
+}
+*/
+
+/*Adjacent sibling: "+" */
+/*select the unordered list that are placed immediately after h3*/
+h3 + ul {
+    border: 4px dotted purple;
+}
+
+/*decendent*/
+/* the a (attribute) that in the li (list item) */
+li a{
+    color:red;
+}
+
+/* the a (attribute) with the href that in the li (list item) */
+li a[href="www.npr.org"]{
+    color:blue;
+    border: 5px solid orange
+}

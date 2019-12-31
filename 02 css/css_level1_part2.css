@@ -1,0 +1,24 @@
+/*selected tag{
+  property: value;
+}*/
+
+body{
+    background: url(http://www.freeskybackgrounds.com/images/700px/700px-FreeSkyBackground-14.jpg);
+    background-repeat: repeat;
+}
+
+div{
+    background: blue;
+    border-color: orange;
+    border-width: 5px;
+    border-style: dotted;
+}
+
+p{
+    color: yellow;
+}
+
+span{
+    background: red;
+    color: black;
+}
