@@ -1,0 +1,27 @@
+body{
+    background-color: #05668D;
+    border: 50px solid #02C39A;
+    border-top: 0px;
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    color: white;
+}
+
+p{
+    padding: 5%;
+}
+
+form{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#submit{
+    background-color: rgb(252, 241, 0);
+    color: black;
+    width: 20%;
+    height: 60px;
+    margin-top: 12px;
+    font-size: 1em;
+    border-radius: 20px;
+}
