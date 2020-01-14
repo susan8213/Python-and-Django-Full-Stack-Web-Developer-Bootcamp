@@ -1,0 +1,40 @@
+h1{
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+}
+
+.art{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+th{
+    height: 100%;
+
+}
+
+td{
+    padding: 20%;
+    border: 3px solid white;
+}
+
+#one{
+    background-color: #7BDFF2;
+}
+
+#two{
+    background-color: #B2F7EF;
+}
+
+#three{
+    background-color: #FCEED1;
+}
+
+#four{
+    background-color: #F7D9E2;
+}
+
+#five{
+    background-color: #F2B5D4;
+}
