@@ -4,3 +4,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("<em>My Second App </em>")
+
+def help(request):
+    context = {"insert_me": "Help PAGE"}
+    return render(request, 'second_app/index.html', context=context)
