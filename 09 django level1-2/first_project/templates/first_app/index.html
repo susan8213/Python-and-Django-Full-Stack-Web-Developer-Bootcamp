@@ -12,5 +12,29 @@
         {{ insert_me }}
         <img src="{% static "images/025.png" %}" alt="Uh Oh, didn't show">
 
+        <h1>Welcome to Django Level Two!</h1>
+        <h2>Here are your access records:</h2>
+
+        <div class="djangotwo">
+            {% if access_records %}
+                <table>
+                    <thead>
+                        <th>Site Name</th>
+                        <th>Date Accessed</th>
+                    </thead>
+
+                    {% for acc in access_records %}
+                    <tr>
+                        <td>{{ acc.webpage }}</td>
+                        <td>{{ acc.date }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>NO ACCESS RECORDS FOUND!</p>
+            {% endif %}
+                
+        </div>
+
     </body>
 </html>
