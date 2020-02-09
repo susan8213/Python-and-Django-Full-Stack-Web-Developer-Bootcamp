@@ -1,5 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import (View, TemplateView, 
+                                ListView, DetailView, 
+                                CreateView, UpdateView, 
+                                DeleteView)
 from django.http import HttpResponse
 from . import models
 
@@ -13,6 +17,21 @@ class SchoolDetailView(DetailView):
     context_object_name = 'school_detail' # school (default by DetailView)
     model = models.School
     template_name = 'basic_app/school_detail.html'
+
+class SchoolCreateView(CreateView):
+    model = models.School
+    fields = ['name', 'principal', 'location']
+
+    # Exception Type:	TemplateDoesNotExist
+    # Exception Value: basic_app/school_form.html
+
+class SchoolUpdateView(UpdateView):
+    model = models.School
+    fields = ['name', 'principal']
+
+class SchoolDeleteView(DeleteView):
+    model = models.School
+    success_url = reverse_lazy("basic_app:list")
 
 class CBView(View):
     def get(self, request):
