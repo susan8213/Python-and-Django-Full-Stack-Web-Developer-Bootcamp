@@ -1,20 +1,20 @@
 <div class="post media">
     <h3>{{ post.message_html|safe }}</h3>
     <div class="media-body">
-        <strong>{{post.user.username}}</strong>
+        <!-- <strong>{{post.user.username}}</strong> -->
         <h5 class="media-heading">
             <span class="username">
-                <a href="{% url 'posts:for_user' username=post.user.username %}"></a>
+                <a href="{% url 'posts:for_user' username=post.user.username %}">@{{post.user.username}}</a>
             </span>
             <time class="time">
-                <a href="{% url 'posts:single' username=post.user.username pk=post.pk %}"></a>
+                <a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{post.created_at}}</a>
             </time>
         </h5>
         
         <div class="media-footer">
             {% if user.is_authenticated and post.user == user %}
                 <a href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn btn-simple">
-                    <svg class="bi bi-x-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <svg class="bi bi-x-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-4.146-3.146a.5.5 0 00-.708-.708L8 7.293 4.854 4.146a.5.5 0 10-.708.708L7.293 8l-3.147 3.146a.5.5 0 00.708.708L8 8.707l3.146 3.147a.5.5 0 00.708-.708L8.707 8l3.147-3.146z" clip-rule="evenodd"></path>
                     </svg>
                     <span class="text-danger icon-label">Delete</span>
